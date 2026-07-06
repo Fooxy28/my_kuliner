@@ -142,7 +142,7 @@ require_once __DIR__ . '/includes/navbar.php';
             <section class="mt-4">
                 <h2 class="h5">Ulasan Pengunjung</h2>
                 <?php if (isLoggedIn() && hasRole('user')): ?>
-                    <form method="post" action="<?= e(baseUrl('submit_review.php')) ?>" class="border rounded p-3 mb-3">
+                    <form method="post" action="<?= e(baseUrl('actions/submit_review.php')) ?>" class="border rounded p-3 mb-3">
                         <input type="hidden" name="restaurant_id" value="<?= (int)$restaurant['id'] ?>">
                         <div class="mb-2">
                             <label class="form-label">Rating</label>

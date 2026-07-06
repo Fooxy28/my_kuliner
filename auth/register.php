@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 $pageTitle = 'Register';
 
-require_once __DIR__ . '/config/database.php';
-require_once __DIR__ . '/includes/header.php';
-require_once __DIR__ . '/includes/navbar.php';
+require_once __DIR__ . '/../config/database.php';
+require_once __DIR__ . '/../includes/header.php';
+require_once __DIR__ . '/../includes/navbar.php';
 $errors = [];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             mysqli_stmt_execute($stmt);
 
             flash('success', 'Registrasi berhasil. Silakan login.');
-            redirect('login.php');
+            redirect('auth/login.php');
         }
     }
 }
@@ -88,4 +88,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </form>
 </main>
 
-<?php require_once __DIR__ . '/includes/footer.php'; ?>
+<?php require_once __DIR__ . '/../includes/footer.php'; ?>

@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-require_once __DIR__ . '/includes/auth.php';
-require_once __DIR__ . '/includes/helpers.php';
+require_once __DIR__ . '/../includes/auth.php';
+require_once __DIR__ . '/../includes/helpers.php';
 
 $_SESSION = [];
 if (ini_get('session.use_cookies')) {
@@ -12,4 +12,4 @@ if (ini_get('session.use_cookies')) {
 }
 session_destroy();
 
-redirect('login.php');
+redirect('auth/login.php');

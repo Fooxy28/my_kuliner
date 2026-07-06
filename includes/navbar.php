@@ -22,10 +22,10 @@ $user = currentUser();
                     <?php else: ?>
                         <li class="nav-item"><a class="nav-link" href="<?= e(baseUrl('user/profile.php')) ?>">Profil</a></li>
                     <?php endif; ?>
-                    <li class="nav-item"><a class="nav-link" href="<?= e(baseUrl('logout.php')) ?>">Logout</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?= e(baseUrl('auth/logout.php')) ?>">Logout</a></li>
                 <?php else: ?>
-                    <li class="nav-item"><a class="nav-link" href="<?= e(baseUrl('login.php')) ?>">Login</a></li>
-                    <li class="nav-item"><a class="btn btn-success btn-sm mt-1" href="<?= e(baseUrl('register.php')) ?>">Daftar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?= e(baseUrl('auth/login.php')) ?>">Login</a></li>
+                    <li class="nav-item"><a class="btn btn-success btn-sm mt-1" href="<?= e(baseUrl('auth/register.php')) ?>">Daftar</a></li>
                 <?php endif; ?>
             </ul>
         </div>

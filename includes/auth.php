@@ -25,7 +25,7 @@ function hasRole(string $role): bool
 function requireLogin(): void
 {
     if (!isLoggedIn()) {
-        header('Location: /my_kuliner/login.php');
+        header('Location: /my_kuliner/auth/login.php');
         exit;
     }
 }
